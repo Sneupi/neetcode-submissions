@@ -1,0 +1,8 @@
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        counts = {}
+        for n in nums:
+            if counts.get(n) is not None:
+                return True
+            counts[n] = 1
+        return False;
